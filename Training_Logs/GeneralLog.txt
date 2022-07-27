@@ -1,0 +1,16 @@
+2022-07-24/18:35:53		BadRaw directory deleted before starting validation!!!
+2022-07-24/18:35:53		GoodRaw directory deleted successfully!!!
+2022-07-24/18:36:04		BadRaw directory deleted before starting validation!!!
+2022-07-24/18:36:04		Error while Deleting Directory : [WinError 32] The process cannot access the file because it is being used by another process: 'Training_Raw_files_validated/Good_Raw/creditCardFraud_28011962_120212.csv'
+2022-07-24/18:36:05		Error while Deleting Directory : [WinError 32] The process cannot access the file because it is being used by another process: 'Training_Raw_files_validated/Good_Raw/creditCardFraud_28011962_120212.csv'
+2022-07-24/18:36:08		Error while Deleting Directory : [WinError 32] The process cannot access the file because it is being used by another process: 'Training_Raw_files_validated/Good_Raw/creditCardFraud_28011963_120213.csv'
+2022-07-24/18:36:12		Error while Deleting Directory : [WinError 32] The process cannot access the file because it is being used by another process: 'Training_Raw_files_validated/Good_Raw/creditCardFraud_28011964_120214.csv'
+2022-07-24/18:36:38		Error while Deleting Directory : [WinError 32] The process cannot access the file because it is being used by another process: 'Training_Raw_files_validated/Good_Raw/creditCardFraud_28011971_120221.csv'
+2022-07-24/18:37:48		GoodRaw directory deleted successfully!!!
+2022-07-26/21:01:05		BadRaw directory deleted before starting validation!!!
+2022-07-26/21:01:05		GoodRaw directory deleted successfully!!!
+2022-07-26/22:02:55		BadRaw directory deleted before starting validation!!!
+2022-07-26/22:02:55		GoodRaw directory deleted successfully!!!
+2022-07-26/22:05:00		GoodRaw directory deleted successfully!!!
+2022-07-26/22:05:00		Bad files moved to archive
+2022-07-26/22:05:00		Bad Raw Data Folder Deleted successfully!!

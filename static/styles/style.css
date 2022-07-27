@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 100vh;
+}
+.navbar-style{
+    box-shadow: 0 5px 10px #efefef;
+}
+.logo{
+    height: 48px;
+    padding: 2px 10px;
+}
+h1{
+    size: 200px;
+    color: red;
+}
+.icon-bar{
+    background-color: rgb(21, 51, 63);
+} 
+li a{
+    color: #333;
+    background: transparent;
+}
+.Big-text{
+    font-size: 70px;
+    margin: 20px 0;
+    color: rgb(21, 51, 63);
+    font-family: Arial, Helvetica, sans-serif;
+}
+a.btn{
+    margin: 30px 20px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+} 
+a.btn-first, a.btn-second{
+    background: transparent;
+    border: 1px solid rgb(21, 51, 63);
+    color: black; 
+}
+a.btn:hover
+{
+    background: rgb(21, 51, 63);
+    color: #fff;
+    box-shadow: 5px 5px 10px rgb(125, 114, 114);
+    width: 260px;
+}
+
+li a:hover
+{
+    background-color: rgb(21, 51, 63);
+    color: rgb(21, 51, 63);
+    box-shadow: 5px 5px 10px #999;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 20px;
+}
+.banner-info , .banner-image
+{
+    border-radius: 100px;    
+    margin-top: 30px;
+}
+
+.foot-icon{
+    height: 28px;
+}
+.Big-text:hover{
+    color: rgb(21, 51, 63)e;
+    font-size: 75px;
+    transition: 0.9;
+}
+.foot-icon:hover{
+    height: 38px;
+    transition: 0.9;
+}
+

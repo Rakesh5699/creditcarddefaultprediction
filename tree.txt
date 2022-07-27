@@ -1,0 +1,504 @@
+Folder PATH listing for volume Windows
+Volume serial number is FC91-C721
+C:.
+¦   app.py
+¦   Credit Card Default .ipynb
+¦   Dockerfile
+¦   predictFromModel.py
+¦   prediction_Validation_Insertion.py
+¦   Procfile
+¦   requirements.txt
+¦   schema_prediction.json
+¦   schema_training.json
+¦   trainingModel.py
+¦   Training_Main_Log.txt
+¦   training_Validation_Insertion.py
+¦   tree.txt
+¦   UCI_Credit_Card.csv
+¦   
++---.github
+¦   +---workflows
+¦           main.yaml
+¦           
++---.idea
+¦   ¦   .gitignore
+¦   ¦   creditcarddefault.iml
+¦   ¦   misc.xml
+¦   ¦   modules.xml
+¦   ¦   vcs.xml
+¦   ¦   workspace.xml
+¦   ¦   
+¦   +---inspectionProfiles
+¦           profiles_settings.xml
+¦           Project_Default.xml
+¦           
++---.ipynb_checkpoints
+¦       Credit Card Default -checkpoint.ipynb
+¦       
++---All Project Documents
+¦       architecture design.pdf
+¦       Deatail Project Report.pdf
+¦       HLD.pdf
+¦       LLD.pdf
+¦       Project demo video.mp4
+¦       Wireframe_Documentaion.pdf
+¦       
++---application_logging
+¦   ¦   logger.py
+¦   ¦   
+¦   +---__pycache__
+¦           logger.cpython-36.pyc
+¦           logger.cpython-37.pyc
+¦           
++---best_model_finder
+¦   ¦   tuner.py
+¦   ¦   
+¦   +---__pycache__
+¦           tuner.cpython-36.pyc
+¦           tuner.cpython-37.pyc
+¦           
++---DataTransformation_Prediction
+¦   ¦   DataTransformationPrediction.py
+¦   ¦   
+¦   +---__pycache__
+¦           DataTransformationPrediction.cpython-36.pyc
+¦           DataTransformationPrediction.cpython-37.pyc
+¦           
++---DataTransform_Training
+¦   ¦   DataTransformation.py
+¦   ¦   
+¦   +---__pycache__
+¦           DataTransformation.cpython-36.pyc
+¦           DataTransformation.cpython-37.pyc
+¦           
++---DataTypeValidation_Insertion_Prediction
+¦   ¦   DataTypeValidationPrediction.py
+¦   ¦   
+¦   +---__pycache__
+¦           DataTypeValidationPrediction.cpython-36.pyc
+¦           DataTypeValidationPrediction.cpython-37.pyc
+¦           
++---DataTypeValidation_Insertion_Training
+¦   ¦   DataTypeValidation.py
+¦   ¦   
+¦   +---__pycache__
+¦           DataTypeValidation.cpython-36.pyc
+¦           DataTypeValidation.cpython-37.pyc
+¦           
++---data_ingestion
+¦   ¦   data_loader.py
+¦   ¦   data_loader_prediction.py
+¦   ¦   
+¦   +---__pycache__
+¦           data_loader.cpython-36.pyc
+¦           data_loader.cpython-37.pyc
+¦           data_loader_prediction.cpython-36.pyc
+¦           data_loader_prediction.cpython-37.pyc
+¦           
++---data_preprocessing
+¦   ¦   clustering.py
+¦   ¦   preprocessing.py
+¦   ¦   
+¦   +---__pycache__
+¦           clustering.cpython-36.pyc
+¦           clustering.cpython-37.pyc
+¦           preprocessing.cpython-36.pyc
+¦           preprocessing.cpython-37.pyc
+¦           preprocessing_pred.cpython-36.pyc
+¦           
++---file_operations
+¦   ¦   file_methods.py
+¦   ¦   
+¦   +---__pycache__
+¦           file_methods.cpython-36.pyc
+¦           file_methods.cpython-37.pyc
+¦           
++---models
+¦   +---KMeans
+¦   ¦       KMeans.sav
+¦   ¦       
+¦   +---XGBoost0
+¦   ¦       XGBoost0.sav
+¦   ¦       
+¦   +---XGBoost1
+¦   ¦       XGBoost1.sav
+¦   ¦       
+¦   +---XGBoost2
+¦   ¦       XGBoost2.sav
+¦   ¦       
+¦   +---XGBoost3
+¦           XGBoost3.sav
+¦           
++---PredictionArchivedBadData
+¦   +---BadData_2020-02-19_165637
+¦   +---BadData_2020-02-19_173611
+¦   +---BadData_2020-04-12_215100
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-05_225106
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-06_234046
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-06_234322
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-11_005007
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-18_165537
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-18_165632
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-18_234939
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-18_235343
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-18_235725
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-19_000146
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-19_222114
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-19_222156
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-19_222259
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-19_222759
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-19_233119
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-20_235156
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-20_235239
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-20_235322
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-20_235345
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_131050
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_131213
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_132427
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_220353
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_231024
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_231059
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_231209
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-21_231326
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_005258
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_005306
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_005346
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_011742
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_012116
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_012234
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_012328
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_012418
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_012541
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_012612
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_012623
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_102250
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-22_102524
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_125914
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_163445
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_163621
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_165039
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_165120
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_170629
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_170710
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_171708
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-24_172027
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-26_220246
+¦   ¦       creditCardFraud_28011961_12.csv
+¦   ¦       creditCardFraud_28011963_120213.csv
+¦   ¦       
+¦   +---BadData_2022-07-26_230649
+¦           creditCardFraud_28011961_12.csv
+¦           creditCardFraud_28011963_120213.csv
+¦           
++---Prediction_Batch_files
+¦       creditCardFraud_28011960_120210.csv
+¦       creditCardFraud_28011961_12.csv
+¦       creditCardFraud_28011962_120212.csv
+¦       creditCardFraud_28011963_120213.csv
+¦       
++---Prediction_Database
+¦       Prediction.db
+¦       
++---Prediction_FileFromDB
+¦       InputFile.csv
+¦       
++---Prediction_Logs
+¦       columnValidationLog.txt
+¦       DataBaseConnectionLog.txt
+¦       dataTransformLog.txt
+¦       DbInsertLog.txt
+¦       DbTableCreateLog.txt
+¦       ExportToCsv.txt
+¦       GeneralLog.txt
+¦       missingValuesInColumn.txt
+¦       nameValidationLog.txt
+¦       Prediction_Log.txt
+¦       
++---Prediction_Output_File
+¦       Predictions.csv
+¦       
++---Prediction_Raw_Data_Validation
+¦   ¦   predictionDataValidation.py
+¦   ¦   
+¦   +---__pycache__
+¦           predictionDataValidation.cpython-36.pyc
+¦           predictionDataValidation.cpython-37.pyc
+¦           
++---Prediction_Raw_Files_Validated
+¦       sample.txt
+¦       
++---preprocessing_data
+¦       K-Means_Elbow.PNG
+¦       
++---SingleValueModels
+¦       rfc.pkl
+¦       
++---SinglrValuePredictionLogs
+¦       SingleValuePredictionLogs.txt
+¦       
++---static
+¦   +---images
+¦   ¦       github.png
+¦   ¦       image4.gif
+¦   ¦       linkden.jpg
+¦   ¦       logo.jpg
+¦   ¦       
+¦   +---styles
+¦           style.css
+¦           
++---templates
+¦       index.html
+¦       prediction.html
+¦       result.html
+¦       singlevalueprediction.html
+¦       training.html
+¦       
++---TrainingArchiveBadData
+¦   +---BadData_2022-07-18_191749
+¦   ¦       CreditFraud_28011960_120210.xlsx
+¦   ¦       file_seperator.ipynb
+¦   ¦       
+¦   +---BadData_2022-07-19_223456
+¦   ¦       file_seperator.ipynb
+¦   ¦       
+¦   +---BadData_2022-07-19_225131
+¦   ¦       file_seperator.ipynb
+¦   ¦       
+¦   +---BadData_2022-07-19_234307
+¦   ¦       CreditFraud_28011960_120210.xlsx
+¦   ¦       file_seperator.ipynb
+¦   ¦       
+¦   +---BadData_2022-07-20_001532
+¦   ¦       CreditFraud_28011960_120210.xlsx
+¦   ¦       file_seperator.ipynb
+¦   ¦       
+¦   +---BadData_2022-07-20_002613
+¦   ¦       CreditFraud_28011960_120210.xlsx
+¦   ¦       file_seperator.ipynb
+¦   ¦       
+¦   +---BadData_2022-07-22_005733
+¦   ¦       CreditFraud_28011960_120210.xlsx
+¦   ¦       file_seperator.ipynb
+¦   ¦       
+¦   +---BadData_2022-07-26_220500
+¦           CreditFraud_28011960_120210.xlsx
+¦           file_seperator.ipynb
+¦           
++---Training_Batch_Files
+¦       creditCardFraud_28011960_120210.csv
+¦       creditCardFraud_28011961_120211.csv
+¦       creditCardFraud_28011962_120212.csv
+¦       creditCardFraud_28011963_120213.csv
+¦       creditCardFraud_28011964_120214.csv
+¦       creditCardFraud_28011965_120215.csv
+¦       creditCardFraud_28011966_120216.csv
+¦       creditCardFraud_28011967_120217.csv
+¦       creditCardFraud_28011968_120218.csv
+¦       creditCardFraud_28011969_120219.csv
+¦       creditCardFraud_28011970_120220.csv
+¦       creditCardFraud_28011971_120221.csv
+¦       creditCardFraud_28011972_120222.csv
+¦       creditCardFraud_28011973_120223.csv
+¦       creditCardFraud_28011974_120224.csv
+¦       creditCardFraud_28011975_120225.csv
+¦       creditCardFraud_28011976_120226.csv
+¦       creditCardFraud_28011977_120227.csv
+¦       creditCardFraud_28011978_120228.csv
+¦       creditCardFraud_28011979_120229.csv
+¦       creditCardFraud_28011980_120230.csv
+¦       creditCardFraud_28011981_120231.csv
+¦       creditCardFraud_28011982_120232.csv
+¦       creditCardFraud_28011983_120233.csv
+¦       creditCardFraud_28011984_120234.csv
+¦       creditCardFraud_28011985_120235.csv
+¦       creditCardFraud_28011986_120236.csv
+¦       creditCardFraud_28011987_120237.csv
+¦       creditCardFraud_28011988_120238.csv
+¦       creditCardFraud_28011989_120239.csv
+¦       creditCardFraud_28011990_120240.csv
+¦       CreditFraud_28011960_120210.xlsx
+¦       file_seperator.ipynb
+¦       
++---Training_Database
+¦       Training.db
+¦       
++---Training_FileFromDB
+¦       InputFile.csv
+¦       
++---Training_Logs
+¦       columnValidationLog.txt
+¦       DataBaseConnectionLog.txt
+¦       dataTransformLog.txt
+¦       DbInsertLog.txt
+¦       DbTableCreateLog.txt
+¦       ExportToCsv.txt
+¦       GeneralLog.txt
+¦       missingValuesInColumn.txt
+¦       ModelTrainingLog.txt
+¦       nameValidationLog.txt
+¦       valuesfromSchemaValidationLog.txt
+¦       
++---Training_Raw_data_validation
+¦   ¦   rawValidation.py
+¦   ¦   
+¦   +---__pycache__
+¦           rawValidation.cpython-36.pyc
+¦           rawValidation.cpython-37.pyc
+¦           
++---Training_Raw_files_validated
++---__pycache__
+        predictFromModel.cpython-37.pyc
+        prediction_Validation_Insertion.cpython-37.pyc
+        trainingModel.cpython-37.pyc
+        training_Validation_Insertion.cpython-37.pyc
+        

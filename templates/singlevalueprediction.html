@@ -1,0 +1,339 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Single Value Prediction</title>
+    <style type="text/css">
+      
+        #ui{
+            background-color:  rgb(227, 234, 237);
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 15px;
+            border: 50px;
+            box-shadow: 10px;
+        }
+        #ui h1{
+            color:rgb(240, 150, 71);
+            font-size: 45px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h2{
+            background-color: antiquewhite;
+            margin-left: 350px;
+            margin-right: 350px;
+            color: rgb(10, 161, 231);
+        }
+        h3{
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(240, 236, 227);
+            padding: 5px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is Nav bar  of page-->
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuicon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href=""><img class="logo" src="/static/images/logo.jpg" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="menuicon">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{{ url_for('SinglValuePrediction') }}">Single Value Prediction</a></li>
+                        <li><a href="{{ url_for('Prediction') }}">File Prediction</a></li>
+                        <li><a href="{{ url_for('Training') }}"> File Training </a></li>
+                        <li><a href="https://github.com/Rakesh5699/creditcarddefaultprediction">GitHub Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+        <!-- This is body of page-->
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="text-center">
+                        {% if neg_result %}
+                            <h2 style="color: rgb(89, 190, 233)(0, 102, 255);"><b> ⬇️ Scroll down for result ⬇️</b></h2>
+                        {% endif %}
+                    </div>
+                    <div class="text-center">
+                        {% if pos_result %}
+                            <h2 style="color: rgb(89, 190, 233)(0, 102, 255);"><b> ⬇️ Scroll down for result ⬇️</b></h2>
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <div id="ui">
+                            <h1 class="text-center">Credit Card Default Prediction</h1>
+                            <form class="form-group text-center" action="{{ url_for('SinglValuePrediction')}}" method="post"><br>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label>Credit Card Limit</label>
+                                        <input type="number" class="form-control" name="cardlimit" placeholder="Enter Your Card Limit" required>
+                                    </div>
+                                        <div class="col-lg-4">
+                                            <label>Gender</label>
+                                            <div class="form-control">Gender: &nbsp
+                                                <label class="radio-inline" id="label-radio">
+                                                    <input type="radio" value="1" name="Gender" [(ngModel)]="gender"> Male
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" value="2" name="Gender" [(ngModel)]="gender"> Female
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label>Education</label>
+                                            <select class="form-control" name="education" id="">
+                                                <option value="none">Select Qualification</option>
+                                                <option value="1">Graduate school</option>
+                                                <option value="2">University</option>
+                                                <option value="3">High School</option>
+                                                <option value="4">Others</option>
+                                                <option value="5">Unknown</option>
+                                            </select>
+                                        </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>MARITAL STATUS</label>
+                                            <select class="form-control" name="marital" id="">
+                                                <option value="none">Select Marital Status</option>
+                                                <option value="1">Married</option>
+                                                <option value="2">Single</option>
+                                                <option value="3">Others</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>AGE</label>
+                                        <input type="number" class="form-control" name="age" placeholder="Enter Your Age" required>
+                                    </div>
+                                </div><br><br>
+                                <div class="row">
+                                    <div class="col-lg-12 text-left">
+                                        <label>Select below repayment status of Last 6 Months(From April to September, 2005):</label>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <label>APRIL</label>
+                                            <select class="form-control" name="repay_april" id="">
+                                                <option value="none">Select</option>
+                                                <option value="-2">No Spends</option>
+                                                <option value="-1">Paid fully</option>
+                                                <option value="0">Paid Mininum</option>
+                                                <option value="1">1 month delay</option>
+                                                <option value="2">2 month delay</option>
+                                                <option value="3">3 month delay</option>
+                                                <option value="4">4 month delay</option>
+                                                <option value="5">5 month delay</option>
+                                                <option value="6">6 month delay</option>
+                                                <option value="7">7 month delay</option>
+                                                <option value="8">8 month delay</option>
+                                                <option value="9">9 month delay</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>MAY</label>
+                                            <select class="form-control" name="repay_may" id="">
+                                                <option value="none">Select</option>
+                                                <option value="-2">No Spends</option>
+                                                <option value="-1">Paid fully</option>
+                                                <option value="0">Paid Mininum</option>
+                                                <option value="1">1 month delay</option>
+                                                <option value="2">2 month delay</option>
+                                                <option value="3">3 month delay</option>
+                                                <option value="4">4 month delay</option>
+                                                <option value="5">5 month delay</option>
+                                                <option value="6">6 month delay</option>
+                                                <option value="7">7 month delay</option>
+                                                <option value="8">8 month delay</option>
+                                                <option value="9">9 month delay</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>JUNE</label>
+                                            <select class="form-control" name="repay_june" id="">
+                                                <option value="none">Select</option>
+                                                <option value="-2">No Spends</option>
+                                                <option value="-1">Paid fully</option>
+                                                <option value="0">Paid Mininum</option>
+                                                <option value="1">1 month delay</option>
+                                                <option value="2">2 month delay</option>
+                                                <option value="3">3 month delay</option>
+                                                <option value="4">4 month delay</option>
+                                                <option value="5">5 month delay</option>
+                                                <option value="6">6 month delay</option>
+                                                <option value="7">7 month delay</option>
+                                                <option value="8">8 month delay</option>
+                                                <option value="9">9 month delay</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>JULY</label>
+                                            <select class="form-control" name="repay_july" id="">
+                                                <option value="none">Select</option>
+                                                <option value="-2">No Spends</option>
+                                                <option value="-1">Paid fully</option>
+                                                <option value="0">Paid Mininum</option>
+                                                <option value="1">1 month delay</option>
+                                                <option value="2">2 month delay</option>
+                                                <option value="3">3 month delay</option>
+                                                <option value="4">4 month delay</option>
+                                                <option value="5">5 month delay</option>
+                                                <option value="6">6 month delay</option>
+                                                <option value="7">7 month delay</option>
+                                                <option value="8">8 month delay</option>
+                                                <option value="9">9 month delay</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>AUGUST</label>
+                                            <select class="form-control" name="repay_aug" id="">
+                                                <option value="none">Select</option>
+                                                <option value="-2">No Spends</option>
+                                                <option value="-1">Paid fully</option>
+                                                <option value="0">Paid Mininum</option>
+                                                <option value="1">1 month delay</option>
+                                                <option value="2">2 month delay</option>
+                                                <option value="3">3 month delay</option>
+                                                <option value="4">4 month delay</option>
+                                                <option value="5">5 month delay</option>
+                                                <option value="6">6 month delay</option>
+                                                <option value="7">7 month delay</option>
+                                                <option value="8">8 month delay</option>
+                                                <option value="9">9 month delay</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>SEPTEMBER</label>
+                                            <select class="form-control" name="repay_sep" id="">
+                                                <option value="none">Select</option>
+                                                <option value="-2">No Spends</option>
+                                                <option value="-1">Paid fully</option>
+                                                <option value="0">Paid Mininum</option>
+                                                <option value="1">1 month delay</option>
+                                                <option value="2">2 month delay</option>
+                                                <option value="3">3 month delay</option>
+                                                <option value="4">4 month delay</option>
+                                                <option value="5">5 month delay</option>
+                                                <option value="6">6 month delay</option>
+                                                <option value="7">7 month delay</option>
+                                                <option value="8">8 month delay</option>
+                                                <option value="9">9 month delay</option>
+                                            </select>
+                                    </div>
+                                </div><br><br>
+                                <div class="row">
+                                    <div class="col-lg-12 text-left">
+                                        <label>Enter below amount of bill generated of Last 6 Months(From April to September, 2005):</label>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <label>APRIL</label>
+                                        <input type="number" class="form-control" name="bill_april" placeholder="April" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>MAY</label>
+                                        <input type="number" class="form-control" name="bill_may" placeholder="May" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>JUNE</label>
+                                        <input type="number" class="form-control" name="bill_june" placeholder="June" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>JULY</label>
+                                        <input type="number" class="form-control" name="bill_july" placeholder="July" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>AUGUST</label>
+                                        <input type="number" class="form-control" name="bill_aug" placeholder="August" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>SEPTEMBER</label>
+                                        <input type="number" class="form-control" name="bill_sep" placeholder="September" step="any" required> 
+                                    </div>
+                                </div><br><br>
+
+                                <div class="row">
+                                    <div class="col-lg-12 text-left">
+                                        <label>Enter below amount paid for Last 6 Months(From April to September, 2005):</label>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <label>APRIL</label>
+                                        <input type="number" class="form-control" name="paid_april" placeholder="April" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>MAY</label>
+                                        <input type="number" class="form-control" name="paid_may" placeholder="May" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>JUNE</label>
+                                        <input type="number" class="form-control" name="paid_june" placeholder="June" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>JULY</label>
+                                        <input type="number" class="form-control" name="paid_july" placeholder="July" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>AUGUST</label>
+                                        <input type="number" class="form-control" name="paid_aug" placeholder="August" step="any" required> 
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label>SEPTEMBER</label>
+                                        <input type="number" class="form-control" name="paid_sep" placeholder="September" step="any" required> 
+                                    </div>
+                                </div><br>
+                            <br><input type="submit" name="Predict"  value="Predict" class="btn btn-primary btn-block btn-lg btn-outline-primary">
+                            </form>
+                            <div class="text-center">
+                                {% if neg_result %}
+                                    <h3 style="color: red;"><b> {{neg_result}}😞</b></h3>
+                                {% endif %}
+                            </div>
+                            <div class="text-center">
+                                {% if pos_result %}
+                                    <h3 style="color: rgb(3, 101, 6);"><b> {{pos_result}}😃</b></h3> <br>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 text-center"></div>
+                </div><br>
+            </div><br>
+            </div>
+                            
+            <div class="row">
+                <div class="col-lg-12 text-center ">
+                    <a href="https://github.com/Rakesh5699?tab=repositories" target="blank"><img src="/static/images/github.png" class="foot-icon"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a href="https://www.linkedin.com/in/kasarla-rakesh-268b181b9/" target="blank"><img src="/static/images/linkden.jpg" class="foot-icon"></a> <br><br>
+                            
+                </div>
+            </div>  
+        </div>
+        </div>
+    </header>
+
+</body>
+</html>
+
